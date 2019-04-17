@@ -1,0 +1,47 @@
+{
+  "name": "EncourageDivision",
+  "displayName": "EncourageDivision",
+  "description": "EncourageDivision",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "hello configuation",
+      "properties": {
+        "hello_world.backgroundImage": {
+          "type": "string",
+          "default": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=42042264,1946135433&fm=27&gp=0.jpg",
+          "description": "可定制图案的鼓励插件",
+          "enmu": []
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "eslint": "^5.13.0",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  }
+}
